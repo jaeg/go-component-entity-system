@@ -9,6 +9,5 @@ type Event struct {
 type Type int
 
 const (
-	MeleeAttack Type = iota
-	DamageTarget
+	TestEvent Type = iota
 )

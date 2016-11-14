@@ -7,6 +7,7 @@ import (
 
 //Object Base game object that contains all the components and blueprint builder
 type Object struct {
+	ID         int
 	components []component.IComponent
 }
 
@@ -18,4 +19,8 @@ func (o *Object) fireEvent(e event.Event) bool {
 		}
 	}
 	return false
+}
+
+func (o *Object) addComponent(c *component.Component) {
+	o.components = append(o.components, c)
 }
